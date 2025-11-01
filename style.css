@@ -1,0 +1,49 @@
+
+:root{
+  --bg:#071726;
+  --card:#0f2b3a;
+  --accent:#0ea5a4;
+  --text:#e6f0f2;
+  --muted:#b8c9cc;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial, Helvetica, sans-serif;background:linear-gradient(180deg,#031018 0%, #071726 100%);color:var(--text);}
+.hero{
+  background-image: url('sr_logo.png');
+  background-size: cover;
+  background-position: center;
+  padding:60px 20px;
+  text-align:center;
+  position:relative;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(3,6,12,0.55), rgba(3,6,12,0.6));
+}
+.hero-inner{
+  position:relative;
+  z-index:1;
+  max-width:900px;
+  margin:0 auto;
+  padding:40px 20px;
+  backdrop-filter: blur(0.2px);
+}
+.logo{width:140px;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.4);background:rgba(255,255,255,0.02);padding:6px}
+h1{font-size:40px;margin:12px 0 6px}
+.tag{color:var(--muted);margin:0 0 10px}
+.contact a{color:var(--accent);text-decoration:none;font-weight:bold}
+.btn{display:inline-block;background:var(--accent);color:#022;text-decoration:none;padding:10px 16px;border-radius:8px;margin-top:12px;font-weight:bold}
+.container{max-width:1000px;margin:30px auto;padding:0 18px}
+h2{color:var(--text);margin-bottom:10px}
+#services ul{columns:2;list-style:disc;padding-left:20px;color:var(--muted)}
+#about ul{list-style:circle;padding-left:20px;color:var(--muted)}
+.contact-card{background:var(--card);padding:18px;border-radius:10px;color:var(--muted);box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+.btn-outline{display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:8px;text-decoration:none}
+footer{text-align:center;color:var(--muted);padding:18px 0;font-size:14px}
+@media (max-width:600px){
+  h1{font-size:28px}
+  #services ul{columns:1}
+  .logo{width:110px}
+}
